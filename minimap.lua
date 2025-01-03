@@ -1,7 +1,7 @@
 DKPBidder_Minimap = {}
 
 function DKPBidder_Minimap.createMinimapButton(onLeftClick, onRightClick)
-    local minimapButton = CreateFrame("Button", "DKPBidderMinimapButton", Minimap)
+    local minimapButton = CreateFrame("Button", "DKPBidderMinimapButton", MinimapButtonFrame or Minimap)
     minimapButton:SetSize(32, 32)
     minimapButton:SetPoint("BOTTOMLEFT", Minimap, "BOTTOMLEFT", 0, 0)  -- Default position
     minimapButton:SetNormalTexture("Interface\\AddOns\\DKPBidder\\media\\icon.tga")
