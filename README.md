@@ -34,6 +34,5 @@ DKPBidder is a World of Warcraft addon designed for managing DKP (Dragon Kill Po
 ## Support
 For issues or feature requests, please contact the developer or submit a ticket on the project's repository.
 
-
-https://github.com/brannik/DKPBidder/blob/master/DEMO/Capture.PNG
-https://github.com/brannik/DKPBidder/blob/master/DEMO/Capture2.PNG
+![img_one](https://github.com/brannik/DKPBidder/blob/master/DEMO/Capture.PNG)
+![img_two](https://github.com/brannik/DKPBidder/blob/master/DEMO/Capture2.PNG)
