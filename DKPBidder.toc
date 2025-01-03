@@ -1,0 +1,16 @@
+## Interface: 30300
+## Title: DKPBidder
+## Notes: A DKP bidding addon for World of Warcraft 3.3.5a
+## Version: 1.0
+## Author: Brannik
+## Dependencies: LibStub
+## SavedVariables: DKPBidderSavedConfig
+
+## Files:
+core.lua
+minimap.lua
+config.lua
+DKPBidder.lua
+libs/LibStub/LibStub.lua
+media/icon.tga
+README.md
