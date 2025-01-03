@@ -23,7 +23,7 @@ function DKPBidder_Core.gatherDKP()
     local playerName = UnitName("player")
     local note
 
-    for i = 1, GetNumGuildMembers() do
+    for i = 1, GetNumGuildMembers(true) do  -- Include offline members
         local name, _, _, _, _, _, publicNote, officerNote = GetGuildRosterInfo(i)
         if name == playerName then
             if DKPBidder_Config.data.DKPLocation == "PublicNote" then
@@ -48,7 +48,7 @@ function DKPBidder_Core.gatherDKP()
     elseif note:match(nTHPattern) then
         DKPBidder_Core.currentDKPvar = note:match("N:(%d+)")
     elseif note:match("^%a+$") then  -- Check if the note is a single string (character name)
-        for i = 1, GetNumGuildMembers() do
+        for i = 1, GetNumGuildMembers(true) do  -- Include offline members
             local name, _, _, _, _, _, publicNote, officerNote = GetGuildRosterInfo(i)
             if name == note then
                 if DKPBidder_Config.data.DKPLocation == "PublicNote" then

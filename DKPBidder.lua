@@ -347,4 +347,10 @@ end)
 frame:SetScript("OnHide", function() frame:Hide() end)
 
 SLASH_DKPBidder1 = "/dkpbidder"
-SlashCmdList["DKPBidder"] = core.toggleFrame
+SlashCmdList["DKPBidder"] = function(msg)
+    if msg == "options" then
+        config.toggleConfigFrame()
+    else
+        core.toggleFrame()
+    end
+end
