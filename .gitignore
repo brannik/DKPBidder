@@ -1,0 +1,6 @@
+# Ignore World of Warcraft project files
+*.wowproj
+*.wowsln
+
+# Ignore Visual Studio folder
+.vs/
