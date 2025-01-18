@@ -1,0 +1,123 @@
+<Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="DKPUI.lua" />
+	<Frame name="DKPUI" inherits="UIPanelDialogTemplate" hidden="true" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
+		<Size x="278" y="245" />
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset x="109" y="-63" />
+			</Anchor>
+		</Anchors>
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+		</KeyValues>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString inherits="GameFontNormal" font="Fonts\MORPHEUS.TTF" text="DKP UI">
+					<Size x="80" y="20" />
+					<Anchors>
+						<Anchor x="99" y="-3" point="TOPLEFT" />
+					</Anchors>
+					<FontHeight val="13" />
+				</FontString>
+				<FontString inherits="GameFontNormal" font="Fonts\MORPHEUS.TTF" text="FontString3">
+					<Size x="178" y="20" />
+					<Anchors>
+						<Anchor x="83" y="-49" point="TOPLEFT" />
+					</Anchors>
+					<FontHeight val="16" />
+					<Color r="1" g="1" b="0.502" />
+				</FontString>
+				<FontString inherits="GameFontNormal" font="Fonts\MORPHEUS.TTF" text="FontString5" outline="NORMAL">
+					<Size x="240" y="20" />
+					<Anchors>
+						<Anchor x="20" y="-204" point="TOPLEFT" />
+					</Anchors>
+					<FontHeight val="14" />
+					<Color r="0.502" g="0.502" />
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="PASS">
+				<Size x="159" y="23" />
+				<Anchors>
+					<Anchor x="61" y="-174" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<Button inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="OUT BID">
+				<Size x="159" y="23" />
+				<Anchors>
+					<Anchor x="61" y="-87" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<Button inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="BID">
+				<Size x="70" y="23" />
+				<Anchors>
+					<Anchor x="150" y="-116" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<EditBox maxLetters="100" name="DKPUIEditBox" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" enableKeyboard="true" numeric="true">
+				<Size x="83" y="23" />
+				<Anchors>
+					<Anchor x="61" y="-116" point="TOPLEFT" />
+				</Anchors>
+				<Backdrop bgFile="" edgeFile="Interface\Tooltips\UI-Tooltip-Border">
+					<EdgeSize val="12" />
+				</Backdrop>
+				<Scripts>
+					<OnEscapePressed>
+						self:ClearFocus()
+					</OnEscapePressed>
+					<OnEditFocusGained>
+						self:HighlightText()
+					</OnEditFocusGained>
+					<OnEditFocusLost>
+						self:ClearFocus()
+					</OnEditFocusLost>
+				</Scripts>
+				<FontString font="GameFontNormal" />
+			</EditBox>
+			<Button inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="ALL IN">
+				<Size x="159" y="23" />
+				<Anchors>
+					<Anchor x="61" y="-145" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<Button name="DKPUI_ItemSlot" inherits="ItemButtonTemplate" parent="DKPUI">
+				<Size x="45" y="45" />
+				<Anchors>
+					<Anchor x="28" y="-36" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						-- Add your custom logic for handling item click events
+					</OnClick>
+					<OnEnter>
+						-- Show the tooltip when hovering over the item button
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+						GameTooltip:SetItemByID(self:GetID())  -- Use this if the item is set by ID
+						-- If you set item with a link:
+						-- GameTooltip:SetHyperlink(self:GetText())  -- For item link in text
+						GameTooltip:Show()
+					</OnEnter>
+					<OnLeave>
+						-- Hide the tooltip when the mouse leaves
+						GameTooltip:Hide()
+					</OnLeave>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnMouseDown>
+				if button == "LeftButton" then
+				self:StartMoving()
+				end
+			</OnMouseDown>
+			<OnMouseUp>
+				if button == "LeftButton" then
+				self:StopMovingOrSizing()
+				end
+			</OnMouseUp>
+		</Scripts>
+	</Frame>
+</Ui>

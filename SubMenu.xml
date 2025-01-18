@@ -1,0 +1,52 @@
+<Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="SubMenu.lua" />
+	<Frame name="SubMenu" inherits="UIMenuTemplate" parent="UIParent" toplevel="true" enableMouse="true" enableMouseClicks="true">
+		<Size x="149" y="202" />
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset x="100" y="-150" />
+			</Anchor>
+		</Anchors>
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+		</KeyValues>
+		<Frames>
+			<Button name="DKPUIButton" inherits="UIPanelButtonTemplate" parent="SubMenu" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" enableMouseMotion="true" text="DKP">
+				<Size x="114" y="23" />
+				<Anchors>
+					<Anchor x="18" y="-16" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<Button name="RollUIButton" inherits="UIPanelButtonTemplate" parent="SubMenu" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" enableMouseMotion="true" text="ROLL">
+				<Size x="114" y="23" />
+				<Anchors>
+					<Anchor x="18" y="-45" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<Button name="ItemsUIButton" inherits="UIPanelButtonTemplate" parent="SubMenu" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" enableMouseMotion="true" text="Items">
+				<Size x="114" y="23" />
+				<Anchors>
+					<Anchor x="18" y="-74" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<Button name="RHistiryButton" inherits="UIPanelButtonTemplate" parent="SubMenu" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" enableMouseMotion="true" text="Raid History">
+				<Size x="114" y="23" />
+				<Anchors>
+					<Anchor x="18" y="-103" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<Button name="OptionsButton" inherits="UIPanelButtonTemplate" parent="SubMenu" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" enableMouseMotion="true" text="Options">
+				<Size x="114" y="23" />
+				<Anchors>
+					<Anchor x="18" y="-161" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<Button name="ManualRequestDKP" inherits="UIPanelButtonTemplate" parent="SubMenu" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" enableMouseMotion="true" text="Request DKP">
+				<Size x="114" y="23" />
+				<Anchors>
+					<Anchor x="18" y="-132" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+		</Frames>
+	</Frame>
+</Ui>

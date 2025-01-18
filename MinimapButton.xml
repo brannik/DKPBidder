@@ -1,0 +1,25 @@
+<Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="MinimapButton.lua" />
+	<Button visible="false" name="MinimapButton" parent="UIParent" toplevel="true">
+		<Texture name="MinimapButtonTexture" file="Interface\\Icons\\INV_Misc_QuestionMark" />
+		<Size x="20" y="20" />
+		<Anchors>
+			<Anchor point="BOTTOMLEFT" relativeTo="Minimap" relativePoint="BOTTOMLEFT">
+				<Offset x="5" y="5" />
+			</Anchor>
+		</Anchors>
+		<Backdrop bgFile="Interface\Icons\INV_Misc_Head_Dragon_01">
+			<EdgeSize />
+		</Backdrop>
+		<Layers>
+			<Layer level="BORDER">
+				<Texture setAllPoints="true" file="Interface\CharacterFrame\TotemBorder" nonBlocking="true">
+					<Size x="35" y="35" />
+					<Anchors>
+						<Anchor point="CENTER" />
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+	</Button>
+</Ui>
