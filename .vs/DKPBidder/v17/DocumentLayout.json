@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPBidder.toc||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:DKPBidder.toc||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.xml||{D5C94126-E975-47A2-83D1-FB11245F7ADC}",
-      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:DKPUI.xml||{D5C94126-E975-47A2-83D1-FB11245F7ADC}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}",
-      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:DKPUI.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\REGEX.lua||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:REGEX.lua||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\Config.lua||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:Config.lua||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.lua||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:DKPUI.lua||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.lua||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:SubMenu.lua||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\Config.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}",
+      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:Config.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\MinimapButton.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}",
-      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:MinimapButton.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}"
+      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\Config.xml||{D5C94126-E975-47A2-83D1-FB11245F7ADC}",
+      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:Config.xml||{D5C94126-E975-47A2-83D1-FB11245F7ADC}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}",
+      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:DKPUI.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}",
       "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:SubMenu.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.xml||{D5C94126-E975-47A2-83D1-FB11245F7ADC}",
-      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:SubMenu.xml||{D5C94126-E975-47A2-83D1-FB11245F7ADC}"
+      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\MinimapButton.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}",
+      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:MinimapButton.xml||{D5C94125-E975-47A2-83D1-FB11245F79DC}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPBidder.toc||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:DKPBidder.toc||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.lua||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:SubMenu.lua||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPBidder.lua||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:DKPBidder.lua||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,41 +74,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DKPUI.xml",
-              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.xml",
-              "RelativeDocumentMoniker": "DKPUI.xml",
-              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.xml",
-              "RelativeToolTip": "DKPUI.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Config.xml",
+              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\Config.xml",
+              "RelativeDocumentMoniker": "Config.xml",
+              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\Config.xml",
+              "RelativeToolTip": "Config.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-01-18T15:07:21.359Z",
+              "WhenOpened": "2025-01-18T15:40:39.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "REGEX.lua",
-              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\REGEX.lua",
-              "RelativeDocumentMoniker": "REGEX.lua",
-              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\REGEX.lua",
-              "RelativeToolTip": "REGEX.lua",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-17T20:14:31.994Z",
-              "EditorCaption": ""
+              "DocumentIndex": 4,
+              "Title": "DKPUI.xml [Design]",
+              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.xml",
+              "RelativeDocumentMoniker": "DKPUI.xml",
+              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.xml [Design]",
+              "RelativeToolTip": "DKPUI.xml [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-01-18T15:27:28.436Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Config.lua",
+              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\Config.lua",
+              "RelativeDocumentMoniker": "Config.lua",
+              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\Config.lua",
+              "RelativeToolTip": "Config.lua",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-18T15:23:21.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DKPUI.lua",
+              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.lua",
+              "RelativeDocumentMoniker": "DKPUI.lua",
+              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.lua",
+              "RelativeToolTip": "DKPUI.lua",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAADQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-18T15:23:17.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Config.xml [Design]",
+              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\Config.xml",
+              "RelativeDocumentMoniker": "Config.xml",
+              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\Config.xml [Design]",
+              "RelativeToolTip": "Config.xml [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-01-18T15:21:06.733Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DKPBidder.toc",
               "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPBidder.toc",
               "RelativeDocumentMoniker": "DKPBidder.toc",
               "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPBidder.toc",
               "RelativeToolTip": "DKPBidder.toc",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-17T20:14:01.671Z",
+              "WhenOpened": "2025-01-18T15:19:05.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SubMenu.lua",
+              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.lua",
+              "RelativeDocumentMoniker": "SubMenu.lua",
+              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.lua",
+              "RelativeToolTip": "SubMenu.lua",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-18T15:09:26.428Z",
               "EditorCaption": ""
             },
             {
@@ -116,71 +170,33 @@
               "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\MinimapButton.xml [Design]",
               "RelativeToolTip": "MinimapButton.xml [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-01-17T20:10:20.32Z",
+              "WhenOpened": "2025-01-18T15:09:20.012Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SubMenu.xml",
-              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.xml",
-              "RelativeDocumentMoniker": "SubMenu.xml",
-              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.xml",
-              "RelativeToolTip": "SubMenu.xml",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAmwDMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-01-17T19:56:17.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "SubMenu.lua",
-              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.lua",
-              "RelativeDocumentMoniker": "SubMenu.lua",
-              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.lua",
-              "RelativeToolTip": "SubMenu.lua",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-17T19:54:34.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "SubMenu.xml [Design]",
               "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.xml",
               "RelativeDocumentMoniker": "SubMenu.xml",
               "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SubMenu.xml [Design]",
               "RelativeToolTip": "SubMenu.xml [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-01-17T19:54:31.972Z",
+              "WhenOpened": "2025-01-18T15:09:22.635Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DKPUI.lua",
-              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.lua",
-              "RelativeDocumentMoniker": "DKPUI.lua",
-              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.lua",
-              "RelativeToolTip": "DKPUI.lua",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "DKPBidder.lua",
+              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPBidder.lua",
+              "RelativeDocumentMoniker": "DKPBidder.lua",
+              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPBidder.lua",
+              "RelativeToolTip": "DKPBidder.lua",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-17T17:07:11.032Z",
+              "WhenOpened": "2025-01-18T15:19:03.921Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DKPUI.xml [Design]",
-              "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.xml",
-              "RelativeDocumentMoniker": "DKPUI.xml",
-              "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\DKPUI.xml [Design]",
-              "RelativeToolTip": "DKPUI.xml [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-01-17T17:07:08.326Z",
-              "EditorCaption": " [Design]"
             }
           ]
         },

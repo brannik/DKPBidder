@@ -10,6 +10,14 @@
     <OutputPath>.</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include=".editorconfig" />
+    <Content Include="Config.lua">
+      <SubType>Code</SubType>
+      <DependentUpon>Config.xml</DependentUpon>
+    </Content>
+    <Content Include="Config.xml">
+      <SubType>Frame</SubType>
+    </Content>
     <Content Include="DConfig.lua">
       <SubType>Code</SubType>
     </Content>

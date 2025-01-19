@@ -1,6 +1,6 @@
 <Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="DKPUI.lua" />
-	<Frame name="DKPUI" inherits="UIPanelDialogTemplate" hidden="true" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
+	<Frame name="DKPUI" inherits="UIPanelDialogTemplate" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
 		<Size x="278" y="245" />
 		<Anchors>
 			<Anchor point="TOPLEFT">

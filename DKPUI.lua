@@ -50,7 +50,7 @@ eventFrame:RegisterEvent("ADDON_LOADED")
 -- Set the event script for handling addon load events
 eventFrame:SetScript("OnEvent", function(self, event, addonName)
     if event == "ADDON_LOADED" and addonName == "DKPBidder" then
-        print("DKP UI Addon Loaded!") -- Confirm the addon loaded successfully in chat
+        DKPUI:Hide()
     end
 end)
 

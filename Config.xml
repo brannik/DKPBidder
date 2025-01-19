@@ -1,0 +1,50 @@
+<Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="Config.lua" />
+	<Frame name="Config" inherits="UIPanelDialogTemplate" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
+		<Size x="321" y="371" />
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset x="100" y="-150" />
+			</Anchor>
+		</Anchors>
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+		</KeyValues>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString inherits="GameFontNormal" font="Fonts\MORPHEUS.TTF" text="Config">
+					<Size x="80" y="20" />
+					<Anchors>
+						<Anchor x="12" y="-3" point="TOPLEFT" />
+					</Anchors>
+					<FontHeight val="15" />
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button inherits="UIPanelButtonTemplate" text="Wipe">
+				<Size x="75" y="23" />
+				<Anchors>
+					<Anchor x="17" y="-29" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<Button inherits="UIPanelButtonTemplate" text="Save">
+				<Size x="75" y="23" />
+				<Anchors>
+					<Anchor x="98" y="-29" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad inherit="prepend">
+				self:RegisterForDrag("LeftButton")
+			</OnLoad>
+			<OnDragStart>
+				self:StartMoving()
+			</OnDragStart>
+			<OnDragStop>
+				self:StopMovingOrSizing()
+			</OnDragStop>
+		</Scripts>
+	</Frame>
+</Ui>

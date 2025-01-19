@@ -4,10 +4,15 @@
 ## Author: brannik
 ## Notes: "Keep your life simple :)"
 ## SavedVAriables: DKP_Config,DKP_Backup,DKP_Items,DKP_History
-## DefaultState: enabled
 ## OptionalDeps: LibStub,Ace3.0
 
 embeds.xml
+
+
+DKPUI.xml
+MinimapButton.xml
+SubMenu.xml
+Config.xml
 
 DKPUI.lua
 MinimapButton.lua
@@ -16,7 +21,4 @@ DKPBidder.lua
 DConfig.lua
 REGEX.lua
 dkp_core.lua
-
-DKPUI.xml
-MinimapButton.xml
-SubMenu.xml
+Config.lua

@@ -28,6 +28,15 @@ function ToggleSubMenu()
                 else
                     print(buttonName .. " clicked")
 				end
+                if buttonName == "OptionsButton" then
+                    if Config:IsShown() then
+                        Config:Hide()
+		            else
+                        Config:Show()
+                    end
+                else
+                    print(buttonName .. " clicked")
+				end
                 SubMenu:Hide()
             end
 
