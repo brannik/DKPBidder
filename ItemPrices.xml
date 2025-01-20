@@ -1,0 +1,36 @@
+<Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ItemPrices.lua" />
+	<Frame name="ItemPrices" inherits="UIPanelDialogTemplate" hidden="true" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
+		<Size x="633" y="371" />
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset x="100" y="-150" />
+			</Anchor>
+		</Anchors>
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+		</KeyValues>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString inherits="GameFontNormal" font="Fonts\MORPHEUS.TTF" text="Item Price History">
+					<Size x="195" y="20" />
+					<Anchors>
+						<Anchor x="14" y="-3" point="TOPLEFT" />
+					</Anchors>
+					<FontHeight val="14" />
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad inherit="prepend">
+				self:RegisterForDrag("LeftButton")
+			</OnLoad>
+			<OnDragStart>
+				self:StartMoving()
+			</OnDragStart>
+			<OnDragStop>
+				self:StopMovingOrSizing()
+			</OnDragStop>
+		</Scripts>
+	</Frame>
+</Ui>

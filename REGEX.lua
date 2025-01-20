@@ -1,9 +1,9 @@
 REGEX = {}
 
 REGEX.strings = {
-	dkpWhisperReges = "",
-	noteDkpRegex = "",
-	noteMainRegex = "",
+	dkpWhisperRegex = "You have (%d+) DKP",
+	noteDkpRegex = "N%a*:%s*(%d+)",
+	noteMainRegex = "^[%w]+$",
 	rwBidStartRegex = "",
 	rwBidCancellRegex = "",
 	reBidWonRegex = "",

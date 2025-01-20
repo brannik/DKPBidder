@@ -1,6 +1,10 @@
+DKP_UI = {}
+
 local eventFrame = CreateFrame("Frame")
 
 local function OnFrameShown()
+    EVENTS.RegisterDKPEvents()
+    DKP_UI.UpdateUI()
     -- Ensure that DKPUIEditBox exists before trying to use it
     local editBox = _G["DKPUIEditBox"]
     if editBox then
@@ -9,6 +13,10 @@ local function OnFrameShown()
     else
         print("Error: DKPUIEditBox not found.")
     end
+    
+	editBox:SetScript("OnEscapePressed", function(self)
+        self:ClearFocus()
+    end)
 
     -- Reference the itemSlot here, after the frame is shown
     local itemSlot = _G["DKPUI_ItemSlot"]  -- Reference to your item slot
@@ -31,13 +39,21 @@ local function OnFrameShown()
     else
         print("Error: DKPUI_ItemSlot not found. Check your XML definition.")
     end
-end
 
+    local dkpAmountText = _G["dkpAmount"]
+    if dkpAmountText then
+	    dkpAmountText:SetText("You have " .. DKP_CORE.DkpAmount .. " DKP")
+	end
+end
+local function OnFrameHidden()
+    EVENTS.UnregisterDKPEvents()
+end
 -- Access the frame defined in XML using _G["DKPUI"]
 local dkpUIFrame = _G["DKPUI"]
 if dkpUIFrame then
     -- Set the OnShow event handler for when the frame is shown
     dkpUIFrame:SetScript("OnShow", OnFrameShown)
+    dkpUIFrame:SetScript("OnHide", OnFrameHidden)
 else
     print("Error: DKPUI frame not found.")
 end
@@ -128,4 +144,14 @@ function SetItemToSlot(itemLink)
         -- Apply the border texture manually
         itemSlot:SetNormalTexture(borderTexture)
     end
+end
+
+function DKP_UI.UpdateUI()
+    
+    if DKPUI:IsShown() then
+	    local dkpAmountText = _G["dkpAmount"]
+        if dkpAmountText then
+	        dkpAmountText:SetText("You have " .. DKP_CORE.DkpAmount .. " DKP")
+	    end
+	end
 end

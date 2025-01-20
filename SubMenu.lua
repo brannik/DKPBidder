@@ -25,8 +25,6 @@ function ToggleSubMenu()
 		            else
                         DKPUI:Show()
                     end
-                else
-                    print(buttonName .. " clicked")
 				end
                 if buttonName == "OptionsButton" then
                     if Config:IsShown() then
@@ -34,8 +32,23 @@ function ToggleSubMenu()
 		            else
                         Config:Show()
                     end
-                else
-                    print(buttonName .. " clicked")
+				end
+                if buttonName == "RollUIButton" then
+                    if roll:IsShown() then
+                        roll:Hide()
+		            else
+                        roll:Show()
+                    end
+				end
+                if buttonName == "ItemsUIButton" then
+                    if ItemPrices:IsShown() then
+                        ItemPrices:Hide()
+		            else
+                        ItemPrices:Show()
+                    end
+				end
+                if buttonName == "ManualRequestDKP" then
+                    DKP_CORE.GatherDKP(true)
 				end
                 SubMenu:Hide()
             end
@@ -43,7 +56,7 @@ function ToggleSubMenu()
             -- Set OnClick for each button in SubMenu
             local buttons = {
                 "DKPUIButton", "RollUIButton", "ItemsUIButton",
-                "RHistiryButton","ManualRequestDKP", "OptionsButton"
+                "ManualRequestDKP", "OptionsButton"
             }
 
             -- Iterate over the buttons and set the OnClick script

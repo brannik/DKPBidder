@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # WowAddOnStudio Solution File, Format Version 11.00
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E6E1D386-69D8-4755-9E61-0950293915FC}") = "DKPBidder", "DKPBidder.wowproj", "{0760F680-5002-45A7-9B96-314FB61F5682}"
 EndProject

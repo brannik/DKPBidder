@@ -9,9 +9,9 @@ end
 
 function DKPBidder:OnEnable()
 		-- Called when the addon is enabled
-
-		-- Print a message to the chat frame
-		self:Print("OnEnable Event Fired: Hello, again ;)")
+		EVENTS.RegisterGlobalEvents()
+		DKP_CORE.GetGuildName()
+		DKP_CORE.GatherDKP(false)
 end
 
 function DKPBidder:OnDisable()

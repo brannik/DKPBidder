@@ -1,0 +1,100 @@
+<Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="roll.lua" />
+	<Frame name="roll" inherits="UIPanelDialogTemplate" hidden="true" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
+		<Size x="281" y="363" />
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset x="100" y="-150" />
+			</Anchor>
+		</Anchors>
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+		</KeyValues>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString inherits="GameFontNormal" font="Fonts\MORPHEUS.TTF" text="Roll tracker">
+					<Size x="135" y="20" />
+					<Anchors>
+						<Anchor x="3" y="-3" point="TOPLEFT" />
+					</Anchors>
+					<FontHeight val="14" />
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="roll_ItemSlot" inherits="ItemButtonTemplate" parent="roll">
+				<Size x="45" y="45" />
+				<Anchors>
+					<Anchor x="30" y="-49" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						-- Add your custom logic for handling item click events
+					</OnClick>
+					<OnEnter>
+						-- Show the tooltip when hovering over the item button
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+						GameTooltip:SetItemByID(self:GetID())  -- Use this if the item is set by ID
+						-- If you set item with a link:
+						-- GameTooltip:SetHyperlink(self:GetText())  -- For item link in text
+						GameTooltip:Show()
+					</OnEnter>
+					<OnLeave>
+						-- Hide the tooltip when the mouse leaves
+						GameTooltip:Hide()
+					</OnLeave>
+				</Scripts>
+			</Button>
+			<Button inherits="UIPanelButtonTemplate" text="ROLL MS">
+				<Size x="75" y="23" />
+				<Anchors>
+					<Anchor x="81" y="-49" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<Button inherits="UIPanelButtonTemplate" text="ROLL OS">
+				<Size x="75" y="23" />
+				<Anchors>
+					<Anchor x="173" y="-49" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<Button inherits="UIPanelButtonTemplate" text="Announce winner">
+				<Size x="167" y="23" />
+				<Anchors>
+					<Anchor x="81" y="-78" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<MessageFrame inherits="BackdropTemplate" parent="roll" toplevel="true">
+				<Size x="242" y="232" />
+				<Anchors>
+					<Anchor x="21" y="-107" point="TOPLEFT" />
+				</Anchors>
+				<KeyValues>
+					<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+				</KeyValues>
+				<FontString inherits="ErrorFont">
+					<FontHeight>
+						<AbsValue val="16" />
+					</FontHeight>
+					<Color r="1" g="0.82" />
+					<Shadow>
+						<Offset>
+							<AbsDimension x="1" y="-1" />
+						</Offset>
+						<Color />
+					</Shadow>
+				</FontString>
+			</MessageFrame>
+		</Frames>
+		<Scripts>
+			<OnLoad inherit="prepend">
+				self:RegisterForDrag("LeftButton")
+			</OnLoad>
+			<OnDragStart>
+				self:StartMoving()
+			</OnDragStart>
+			<OnDragStop>
+				self:StopMovingOrSizing()
+			</OnDragStop>
+		</Scripts>
+	</Frame>
+</Ui>

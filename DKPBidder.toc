@@ -13,8 +13,11 @@ DKPUI.xml
 MinimapButton.xml
 SubMenu.xml
 Config.xml
+roll.xml
+ItemPrices.xml
 
 DKPUI.lua
+EventHandlers.lua
 MinimapButton.lua
 SubMenu.lua
 DKPBidder.lua
@@ -22,3 +25,6 @@ DConfig.lua
 REGEX.lua
 dkp_core.lua
 Config.lua
+roll.lua
+ItemPrices.lua
+ItemPricesCORE.lua

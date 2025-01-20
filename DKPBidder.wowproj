@@ -40,6 +40,19 @@
     <Content Include="embeds.xml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="EventHandlers.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="ItempPricesCORE.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="ItemPrices.lua">
+      <SubType>Code</SubType>
+      <DependentUpon>ItemPrices.xml</DependentUpon>
+    </Content>
+    <Content Include="ItemPrices.xml">
+      <SubType>Frame</SubType>
+    </Content>
     <Content Include="MinimapButton.lua">
       <SubType>Code</SubType>
       <DependentUpon>MinimapButton.xml</DependentUpon>
@@ -49,6 +62,13 @@
     </Content>
     <Content Include="REGEX.lua">
       <SubType>Code</SubType>
+    </Content>
+    <Content Include="roll.lua">
+      <SubType>Code</SubType>
+      <DependentUpon>roll.xml</DependentUpon>
+    </Content>
+    <Content Include="roll.xml">
+      <SubType>Frame</SubType>
     </Content>
     <Content Include="SubMenu.lua">
       <SubType>Code</SubType>
