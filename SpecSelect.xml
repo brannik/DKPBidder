@@ -1,0 +1,82 @@
+<Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="SpecSelect.lua" />
+	<Frame name="SpecSelect" inherits="UIPanelDialogTemplate" parent="UIParent" toplevel="true" movable="true">
+		<Size x="205" y="152" />
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset x="100" y="-150" />
+			</Anchor>
+		</Anchors>
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+		</KeyValues>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="sellectedSpec" inherits="GameFontNormal" text="">
+					<Size x="162" y="20" />
+					<Anchors>
+						<Anchor x="22" y="-92" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="specToggleOne" inherits="ItemButtonTemplate" text="Button1">
+				<Size x="50" y="50" />
+				<Anchors>
+					<Anchor x="22" y="-36" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						OneToggleButton_OnClick(self)
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\Buttons\UI-Quickslot2" />
+				<HighlightTexture file="Interface\Buttons\UI-Quickslot-Depress" />
+			</Button>
+			<Button name="specToggleTree" inherits="ItemButtonTemplate" text="Button1">
+				<Size x="50" y="50" />
+				<Anchors>
+					<Anchor x="134" y="-36" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						OneToggleButton_OnClick(self)
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\Buttons\UI-Quickslot2" />
+				<HighlightTexture file="Interface\Buttons\UI-Quickslot-Depress" />
+			</Button>
+			<Button name="specToggleTwo" inherits="ItemButtonTemplate" text="Button1">
+				<Size x="50" y="50" />
+				<Anchors>
+					<Anchor x="78" y="-36" point="TOPLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						OneToggleButton_OnClick(self)
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\Buttons\UI-Quickslot2" />
+				<HighlightTexture file="Interface\Buttons\UI-Quickslot-Depress" />
+			</Button>
+			<Button name="btnAnnounceMS" inherits="UIPanelButtonTemplate" text="ANNOUNCE IN RAID">
+				<Size x="162" y="23" />
+				<Anchors>
+					<Anchor x="22" y="-118" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad inherit="prepend">
+				self:RegisterForDrag("LeftButton")
+			</OnLoad>
+			<OnDragStart>
+				self:StartMoving()
+			</OnDragStart>
+			<OnDragStop>
+				self:StopMovingOrSizing()
+			</OnDragStop>
+		</Scripts>
+	</Frame>
+</Ui>

@@ -8,6 +8,8 @@ CONFIG.defaultConfig = {
 		smallDkpFrame = false,
 		useCustomChat = false,
 		showDkpInRaidChat = false,
+		showMSInRaidChat = false,
+		showGSInRaidChat = false,
 		dkpAmount = 0
 	}
 }

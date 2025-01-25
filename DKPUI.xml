@@ -1,7 +1,7 @@
 <Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="DKPUI.lua" />
 	<Frame name="DKPUI" inherits="UIPanelDialogTemplate" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
-		<Size x="278" y="298" />
+		<Size x="278" y="324" />
 		<Anchors>
 			<Anchor point="TOPLEFT">
 				<Offset x="109" y="-63" />
@@ -11,6 +11,14 @@
 			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
 		</KeyValues>
 		<Layers>
+			<Layer>
+				<Texture name="specTexture">
+					<Size x="32" y="34" />
+					<Anchors>
+						<Anchor x="220" y="-267" point="TOPLEFT" />
+					</Anchors>
+				</Texture>
+			</Layer>
 			<Layer level="OVERLAY">
 				<FontString inherits="GameFontNormal" font="Fonts\MORPHEUS.TTF" text="DKP UI">
 					<Size x="80" y="20" />
@@ -19,7 +27,7 @@
 					</Anchors>
 					<FontHeight val="13" />
 				</FontString>
-				<FontString inherits="GameFontNormal" font="Fonts\MORPHEUS.TTF" text="FontString3">
+				<FontString name="currentBidText" inherits="GameFontNormal" font="Fonts\MORPHEUS.TTF" text="FontString3">
 					<Size x="178" y="20" />
 					<Anchors>
 						<Anchor x="50" y="-113" point="TOPLEFT" />
@@ -43,29 +51,35 @@
 					<FontHeight val="13" />
 					<Color r="0.502" g="0.502" b="1" />
 				</FontString>
-				<FontString inherits="GameFontNormal" text="MIN: 10000  MAX: 20000 AVG: 10050 DROPS: 100" maxLines="3">
+				<FontString name="itemPrices" inherits="GameFontNormal" text="MIN: 10000  MAX: 20000 AVG: 10050 DROPS: 100" maxLines="3">
 					<Size x="199" y="45" />
 					<Anchors>
 						<Anchor x="63" y="-36" point="TOPLEFT" />
 					</Anchors>
 					<FontHeight val="10" />
 				</FontString>
+				<FontString name="labelMS" inherits="GameFontNormal" text="Main Spec Sellected">
+					<Size x="157" y="20" />
+					<Anchors>
+						<Anchor x="61" y="-281" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
 			</Layer>
 		</Layers>
 		<Frames>
-			<Button inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="PASS">
+			<Button name="btnPass" inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="PASS">
 				<Size x="159" y="23" />
 				<Anchors>
 					<Anchor x="63" y="-226" point="TOPLEFT" />
 				</Anchors>
 			</Button>
-			<Button inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="OUT BID">
+			<Button name="btnOutBid" inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="OUT BID">
 				<Size x="159" y="23" />
 				<Anchors>
 					<Anchor x="60" y="-139" point="TOPLEFT" />
 				</Anchors>
 			</Button>
-			<Button inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="BID">
+			<Button name="btnCustomBid" inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="BID">
 				<Size x="70" y="23" />
 				<Anchors>
 					<Anchor x="149" y="-168" point="TOPLEFT" />
@@ -95,7 +109,7 @@
 				</Scripts>
 				<FontString font="GameFontNormal" />
 			</EditBox>
-			<Button inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="ALL IN">
+			<Button name="btnBidAllin" inherits="UIPanelButtonTemplate" parent="DKPUI" toplevel="true" useParentLevel="true" enableMouse="true" enableMouseClicks="true" text="ALL IN">
 				<Size x="159" y="23" />
 				<Anchors>
 					<Anchor x="63" y="-197" point="TOPLEFT" />

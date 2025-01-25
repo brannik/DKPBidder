@@ -4,6 +4,7 @@
 ## Author: brannik
 ## Notes: "Keep your life simple :)"
 ## SavedVAriables: DKP_Config,DKP_Backup,DKP_Items,DKP_History
+## SavedVariablesPerCharacter: MS_Change
 ## OptionalDeps: LibStub,Ace3.0
 
 embeds.xml
@@ -15,6 +16,8 @@ SubMenu.xml
 Config.xml
 roll.xml
 ItemPrices.xml
+SpecSelect.xml
+RoosterFrame.xml
 
 DKPUI.lua
 EventHandlers.lua
@@ -27,4 +30,9 @@ dkp_core.lua
 Config.lua
 roll.lua
 ItemPrices.lua
-ItemPricesCORE.lua
+ItempPricesCORE.lua
+AddonComunication.lua
+SpecSelect.lua
+SpecIcons.lua
+RoosterFrame.lua
+CustomChat.lua

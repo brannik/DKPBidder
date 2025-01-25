@@ -11,12 +11,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".editorconfig" />
+    <Content Include="AddonComunication.lua">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Config.lua">
       <SubType>Code</SubType>
       <DependentUpon>Config.xml</DependentUpon>
     </Content>
     <Content Include="Config.xml">
       <SubType>Frame</SubType>
+    </Content>
+    <Content Include="CustomChat.lua">
+      <SubType>Code</SubType>
     </Content>
     <Content Include="DConfig.lua">
       <SubType>Code</SubType>
@@ -68,6 +74,23 @@
       <DependentUpon>roll.xml</DependentUpon>
     </Content>
     <Content Include="roll.xml">
+      <SubType>Frame</SubType>
+    </Content>
+    <Content Include="RoosterFrame.lua">
+      <SubType>Code</SubType>
+      <DependentUpon>RoosterFrame.xml</DependentUpon>
+    </Content>
+    <Content Include="RoosterFrame.xml">
+      <SubType>Frame</SubType>
+    </Content>
+    <Content Include="SpecIcons.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="SpecSelect.lua">
+      <SubType>Code</SubType>
+      <DependentUpon>SpecSelect.xml</DependentUpon>
+    </Content>
+    <Content Include="SpecSelect.xml">
       <SubType>Frame</SubType>
     </Content>
     <Content Include="SubMenu.lua">

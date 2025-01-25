@@ -1,7 +1,7 @@
 <Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="Config.lua" />
 	<Frame name="Config" inherits="UIPanelDialogTemplate" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
-		<Size x="321" y="371" />
+		<Size x="465" y="284" />
 		<Anchors>
 			<Anchor point="TOPLEFT">
 				<Offset x="100" y="-150" />
@@ -19,19 +19,151 @@
 					</Anchors>
 					<FontHeight val="15" />
 				</FontString>
+				<FontString inherits="GameFontNormal" text="DKP Location" justifyH="LEFT">
+					<Size x="156" y="20" />
+					<Anchors>
+						<Anchor x="18" y="-64" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Public Note">
+					<Size x="80" y="20" />
+					<Anchors>
+						<Anchor x="204" y="-64" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Officer Note">
+					<Size x="80" y="20" />
+					<Anchors>
+						<Anchor x="355" y="-64" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Officer note visible?">
+					<Size x="138" y="20" />
+					<Anchors>
+						<Anchor x="312" y="-82" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="DKP Frame" justifyH="LEFT">
+					<Size x="156" y="20" />
+					<Anchors>
+						<Anchor x="18" y="-117" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Enable">
+					<Size x="60" y="20" />
+					<Anchors>
+						<Anchor x="204" y="-117" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Small?">
+					<Size x="60" y="20" />
+					<Anchors>
+						<Anchor x="292" y="-117" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Custom chat" justifyH="LEFT">
+					<Size x="156" y="20" />
+					<Anchors>
+						<Anchor x="18" y="-158" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Enable">
+					<Size x="60" y="20" />
+					<Anchors>
+						<Anchor x="205" y="-158" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Show the DKP of other players ?">
+					<Size x="212" y="20" />
+					<Anchors>
+						<Anchor x="205" y="-189" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Show the GS of other players ?">
+					<Size x="205" y="20" />
+					<Anchors>
+						<Anchor x="205" y="-215" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Show the MS of other players ?">
+					<Size x="205" y="20" />
+					<Anchors>
+						<Anchor x="205" y="-243" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
 			</Layer>
 		</Layers>
 		<Frames>
-			<Button inherits="UIPanelButtonTemplate" text="Wipe">
-				<Size x="75" y="23" />
+			<Button name="btnWipeConfig" inherits="UIPanelButtonTemplate" text="Wipe Config">
+				<Size x="99" y="23" />
 				<Anchors>
-					<Anchor x="17" y="-29" point="TOPLEFT" />
+					<Anchor x="270" y="-35" point="TOPLEFT" />
 				</Anchors>
 			</Button>
-			<Button inherits="UIPanelButtonTemplate" text="Save">
+			<Button name="btnSaveConfig" inherits="UIPanelButtonTemplate" text="Save">
 				<Size x="75" y="23" />
 				<Anchors>
-					<Anchor x="98" y="-29" point="TOPLEFT" />
+					<Anchor x="375" y="-35" point="TOPLEFT" />
+				</Anchors>
+			</Button>
+			<CheckButton name="chkPublicNote" inherits="UICheckButtonTemplate" text="CheckButton1">
+				<Size x="25" y="25" />
+				<Anchors>
+					<Anchor x="182" y="-62" point="TOPLEFT" />
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="chkOfficerNote" inherits="UICheckButtonTemplate" text="CheckButton1">
+				<Size x="25" y="25" />
+				<Anchors>
+					<Anchor x="333" y="-62" point="TOPLEFT" />
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="chkOfficerNoteVisible" inherits="UICheckButtonTemplate" text="CheckButton1">
+				<Size x="25" y="25" />
+				<Anchors>
+					<Anchor x="290" y="-80" point="TOPLEFT" />
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="chkDKPFrameEnable" inherits="UICheckButtonTemplate" text="CheckButton1">
+				<Size x="25" y="25" />
+				<Anchors>
+					<Anchor x="182" y="-115" point="TOPLEFT" />
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="chkDKPFrameSmall" inherits="UICheckButtonTemplate" text="CheckButton1">
+				<Size x="25" y="25" />
+				<Anchors>
+					<Anchor x="270" y="-115" point="TOPLEFT" />
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="chkCustomChatEnable" inherits="UICheckButtonTemplate" text="CheckButton1">
+				<Size x="25" y="25" />
+				<Anchors>
+					<Anchor x="183" y="-156" point="TOPLEFT" />
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="chkShowDkpInChat" inherits="UICheckButtonTemplate" text="CheckButton1">
+				<Size x="25" y="25" />
+				<Anchors>
+					<Anchor x="183" y="-187" point="TOPLEFT" />
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="chkShowGSInChat" inherits="UICheckButtonTemplate" text="CheckButton1">
+				<Size x="25" y="25" />
+				<Anchors>
+					<Anchor x="183" y="-213" point="TOPLEFT" />
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="chkShowMSInChat" inherits="UICheckButtonTemplate" text="CheckButton1">
+				<Size x="25" y="25" />
+				<Anchors>
+					<Anchor x="183" y="-241" point="TOPLEFT" />
+				</Anchors>
+			</CheckButton>
+			<Button name="btnWipeItems" inherits="UIPanelButtonTemplate" text="Wipe Items">
+				<Size x="99" y="23" />
+				<Anchors>
+					<Anchor x="166" y="-35" point="TOPLEFT" />
 				</Anchors>
 			</Button>
 		</Frames>

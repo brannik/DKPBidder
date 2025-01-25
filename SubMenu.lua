@@ -50,13 +50,31 @@ function ToggleSubMenu()
                 if buttonName == "ManualRequestDKP" then
                     DKP_CORE.GatherDKP(true)
 				end
+                if buttonName == "MsChangeButton" then
+                    if SpecSelect:IsShown() then
+                        SpecSelect:Hide()
+		            else
+                        SpecSelect:Show()
+                    end
+				end
+                
+                if buttonName == "RoosterButton" then
+                    if RoosterFrame:IsShown() then
+                        RoosterFrame:Hide()
+		            else
+                        RoosterFrame:Show()
+                    end
+				end
+                if buttonName == "ManualRequestDKP" then
+                    DKP_CORE.GatherDKP(true)
+				end
                 SubMenu:Hide()
             end
 
             -- Set OnClick for each button in SubMenu
             local buttons = {
                 "DKPUIButton", "RollUIButton", "ItemsUIButton",
-                "ManualRequestDKP", "OptionsButton"
+                "ManualRequestDKP", "OptionsButton","MsChangeButton","RoosterButton"
             }
 
             -- Iterate over the buttons and set the OnClick script

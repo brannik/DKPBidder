@@ -1,0 +1,25 @@
+<Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="RoosterFrame.lua" />
+	<Frame name="RoosterFrame" inherits="UIPanelDialogTemplate" parent="UIParent" toplevel="true" movable="true">
+		<Size x="597" y="363" />
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset x="100" y="-150" />
+			</Anchor>
+		</Anchors>
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+		</KeyValues>
+		<Scripts>
+			<OnLoad inherit="prepend">
+				self:RegisterForDrag("LeftButton")
+			</OnLoad>
+			<OnDragStart>
+				self:StartMoving()
+			</OnDragStart>
+			<OnDragStop>
+				self:StopMovingOrSizing()
+			</OnDragStop>
+		</Scripts>
+	</Frame>
+</Ui>
