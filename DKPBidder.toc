@@ -1,7 +1,7 @@
 ## Interface: 30300
 ## Title: DKPBidder
 ## Version: 1.0
-## Author: brannik
+## Author: Agset
 ## Notes: "Keep your life simple :)"
 ## SavedVAriables: DKP_Config,DKP_Backup,DKP_Items,DKP_History
 ## SavedVariablesPerCharacter: MS_Change

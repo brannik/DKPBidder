@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\CustomChat.lua||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:CustomChat.lua||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\dkp_core.lua||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:dkp_core.lua||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\CustomChat.lua||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|solutionrelative:CustomChat.lua||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0760F680-5002-45A7-9B96-314FB61F5682}|DKPBidder.wowproj|K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\SpecIcons.lua||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 253,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -126,26 +126,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "dkp_core.lua",
               "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\dkp_core.lua",
               "RelativeDocumentMoniker": "dkp_core.lua",
               "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\dkp_core.lua",
               "RelativeToolTip": "dkp_core.lua",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAALMAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAALYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-01-25T16:07:11.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CustomChat.lua",
               "DocumentMoniker": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\CustomChat.lua",
               "RelativeDocumentMoniker": "CustomChat.lua",
               "ToolTip": "K:\\World of Warcraft 3.3.5a\\Interface\\AddOns\\DKPBidder\\CustomChat.lua",
               "RelativeToolTip": "CustomChat.lua",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAHQAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAHMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-01-25T15:37:51.015Z",
               "EditorCaption": ""
