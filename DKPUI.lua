@@ -139,44 +139,53 @@ function InitializeItemSlot(itemSlot)
     end
 end
 
--- Set the item in the item slot
 function DKP_UI.SetItemToSlot(itemLink)
-    local itemSlot = _G["DKPUI_ItemSlot"]  -- Reference to your item slot
+    local itemSlot = _G["DKPUI_ItemSlot"] -- Reference to your item slot
     if itemSlot and itemLink then
-        -- Set the item's icon based on the itemLink
-        local texture = itemSlot.texture
-        if texture then
-            -- Set the icon immediately
-            texture:SetTexture(GetItemIcon(itemLink))  -- Set the icon based on item link
+        -- Ensure the texture exists in the itemSlot
+        if not itemSlot.texture then
+            itemSlot.texture = itemSlot:CreateTexture(nil, "ARTWORK")
+            itemSlot.texture:SetAllPoints(itemSlot) -- Match the size of the item slot
         end
 
-        -- Optionally, set the item count (e.g., 1 item)
-        SetItemButtonCount(itemSlot, 1)
+        -- Get the item's icon from the itemLink and apply it
+        local icon = GetItemIcon(itemLink)
+        if icon then
+            itemSlot.texture:SetTexture(icon) -- Set the icon texture
+            itemSlot.texture:SetVertexColor(1, 1, 1) -- Ensure the icon is fully visible
+        else
+            print("Failed to retrieve icon for", itemLink)
+        end
+
+        if itemSlot then
+            -- Clear textures to avoid inner square
+            itemSlot:SetNormalTexture(nil)
+            itemSlot:SetPushedTexture(nil)
+            itemSlot:SetDisabledTexture(nil)
+
+            -- Add hover effect if needed
+            local highlightTexture = itemSlot:CreateTexture(nil, "HIGHLIGHT")
+            highlightTexture:SetAllPoints(itemSlot)
+            highlightTexture:SetTexture("Interface\\Buttons\\ButtonHilight-Square")
+            highlightTexture:SetBlendMode("ADD")
+            itemSlot:SetHighlightTexture(highlightTexture)
+        end
+
+        -- Add a hover effect using a highlight texture
+        if not itemSlot.hoverTexture then
+            itemSlot.hoverTexture = itemSlot:CreateTexture(nil, "HIGHLIGHT")
+            itemSlot.hoverTexture:SetAllPoints(itemSlot)
+            itemSlot.hoverTexture:SetTexture("Interface\\Buttons\\UI-Quickslot-Highlight") -- Default highlight texture
+            itemSlot.hoverTexture:SetBlendMode("ADD") -- Glow effect
+        end
+        itemSlot:SetHighlightTexture(itemSlot.hoverTexture)
 
         -- Try to get item information
         local function UpdateItemInfo()
             local itemName, _, _, itemQuality = GetItemInfo(itemLink)
 
             if itemQuality then
-                -- Item information is available, update the item slot
-                local borderTexture = "Interface\\Buttons\\UI-Quickslot"  -- Default no quality
-
-                if itemQuality == 1 then
-                    borderTexture = "Interface\\Buttons\\UI-Quickslot-Green"  -- Common quality
-                elseif itemQuality == 2 then
-                    borderTexture = "Interface\\Buttons\\UI-Quickslot-Blue"  -- Uncommon quality
-                elseif itemQuality == 3 then
-                    borderTexture = "Interface\\Buttons\\UI-Quickslot-Purple"  -- Rare quality
-                elseif itemQuality == 4 then
-                    borderTexture = "Interface\\Buttons\\UI-Quickslot-Orange"  -- Epic quality
-                end
-
-                -- Apply the normal texture (ensure the button is visually active)
-                itemSlot:SetNormalTexture(borderTexture)
-
-                -- Also set a highlight texture to make it look active
-                local highlightTexture = "Interface\\Buttons\\UI-Quickslot-Highlight"  -- Active highlight
-                itemSlot:SetHighlightTexture(highlightTexture)
+                
 
                 -- Apply tooltip on hover
                 itemSlot:SetScript("OnEnter", function()
@@ -192,7 +201,7 @@ function DKP_UI.SetItemToSlot(itemLink)
             else
                 -- Retry after a short delay if item info is not available
                 print("Item info is not available yet, retrying...")
-                C_Timer.After(0.1, UpdateItemInfo)  -- Retry after 100ms
+                C_Timer.After(0.1, UpdateItemInfo) -- Retry after 100ms
             end
         end
 

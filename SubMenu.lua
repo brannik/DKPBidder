@@ -27,10 +27,10 @@ function ToggleSubMenu()
                     end
 				end
                 if buttonName == "OptionsButton" then
-                    if Config:IsShown() then
-                        Config:Hide()
+                    if DKPConfig:IsShown() then
+                        DKPConfig:Hide()
 		            else
-                        Config:Show()
+                        DKPConfig:Show()
                     end
 				end
                 if buttonName == "RollUIButton" then

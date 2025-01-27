@@ -16,6 +16,11 @@ local function InitUI()
     ShowMSInChat = _G["chkShowMSInChat"] --
 
 
+    WipeConfigButton:SetScript("OnClick",function()
+	    DKP_Config = {}
+        ReloadUI()
+	end)
+
     ONoteCheck:SetScript("OnClick", function() 
 	    PNoteCheck:SetChecked(false)
         DKP_CORE.config.dkpStorage = "Officer Note"
@@ -66,7 +71,7 @@ local function InitUI()
         DKP_CORE.SaveConfig()
         ReloadUI()
 	end)
-
+    DKP_CORE.GetGuildName()
     DKP_CORE.LoadConfig()
 
     if DKP_CORE.config then
@@ -112,7 +117,7 @@ local function OnFrameShown()
 end
 
 -- Access the frame defined in XML using _G["Config"]
-local ConfigFrame = _G["Config"]
+local ConfigFrame = _G["DKPConfig"]
 if ConfigFrame then
     -- Set the OnShow event handler for when the frame is shown
     ConfigFrame:SetScript("OnShow", OnFrameShown)

@@ -5,11 +5,12 @@ REGEX.strings = {
 	spendRegex = "Spends (%d+)", -- fix
 	noteDkpRegex = "N%a*:%s*(%d+)",
 	noteMainRegex = "^[%w]+$",
-	rwBidStartRegex = "Rolling for (.+) started.",
+	rwBidStartRegex = "Bidding for (.+) started.",
 	rwBidCancellRegex = "(.+) has been cancelled.",
 	reBidWonRegex = "^(%S+) won (.-) with (%d+) DKP%.?",
-	rwRollStartRegex = "",
+	rwRollStartRegex = "roll%s*(.+)",
 	rwRollCancelRegex = "",
 	rwRollWonRegex = "",
-	placeBidRegex = "^(%d+)$"
+	placeBidRegex = "^(%d+)$",
+	rollRegex = "^(%S+) rolls (%d+) %((%d+)%-(%d+)%)$"
 }

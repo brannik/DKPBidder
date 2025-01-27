@@ -44,8 +44,12 @@
 						GameTooltip:Hide()
 					</OnLeave>
 				</Scripts>
+				<NormalTexture file="" />
+				<PushedTexture file="" alphaMode="DISABLE" />
+				<DisabledTexture file="" alphaMode="DISABLE" />
+				<HighlightTexture blendMode="ADD" file="Interface\Buttons\ButtonHilight-Square" alphaMode="DISABLE" />
 			</Button>
-			<Button inherits="UIPanelButtonTemplate" text="ROLL MS">
+			<Button name="btnRoll" inherits="UIPanelButtonTemplate" text="ROLL MS">
 				<Size x="75" y="23" />
 				<Anchors>
 					<Anchor x="81" y="-49" point="TOPLEFT" />
@@ -63,27 +67,12 @@
 					<Anchor x="81" y="-78" point="TOPLEFT" />
 				</Anchors>
 			</Button>
-			<MessageFrame inherits="BackdropTemplate" parent="roll" toplevel="true">
-				<Size x="242" y="232" />
+			<ScrollFrame name="rollsFrame" inherits="UIPanelScrollFrameTemplate">
+				<Size x="233" y="237" />
 				<Anchors>
-					<Anchor x="21" y="-107" point="TOPLEFT" />
+					<Anchor x="15" y="-107" point="TOPLEFT" />
 				</Anchors>
-				<KeyValues>
-					<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
-				</KeyValues>
-				<FontString inherits="ErrorFont">
-					<FontHeight>
-						<AbsValue val="16" />
-					</FontHeight>
-					<Color r="1" g="0.82" />
-					<Shadow>
-						<Offset>
-							<AbsDimension x="1" y="-1" />
-						</Offset>
-						<Color />
-					</Shadow>
-				</FontString>
-			</MessageFrame>
+			</ScrollFrame>
 		</Frames>
 		<Scripts>
 			<OnLoad inherit="prepend">

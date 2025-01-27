@@ -2,6 +2,7 @@ EVENTS = {}
 
 local DKPEventFrame = CreateFrame("Frame")
 local GLOBALEventsFrame = CreateFrame("Frame")
+local ROLLEventFrame = CreateFrame("Frame")
 local myName = UnitName("player")
 
 local function OnDKPMessageRecieved(self, event, message, sender)
@@ -23,6 +24,7 @@ local function OnDKPMessageRecieved(self, event, message, sender)
 	elseif event == "CHAT_MSG_RAID_WARNING" then
         -- start bid here
         local startBidMsg = string.match(message,REGEX.strings.rwBidStartRegex)
+        local startRollMsg = string.match(message,REGEX.strings.rwRollStartRegex)
         if startBidMsg then
             if not DKPUI:IsShown() then
                 
@@ -41,6 +43,17 @@ local function OnDKPMessageRecieved(self, event, message, sender)
                 DKP_UI.CurrentBidAmount = 0
                 DKP_UI.Activesession = true
                 DKP_UI.ManageButtons()
+			end
+		end
+
+        if startRollMsg then
+		    if not roll:IsShown() then
+			    roll:Show()
+                ROLL_UI.SetItemToSlot(startRollMsg)
+                ROLL_UI.rolls = {}
+			else
+			    ROLL_UI.SetItemToSlot(startRollMsg)
+                ROLL_UI.rolls = {}
 			end
 		end
 
@@ -100,7 +113,7 @@ local function OnGlobalWhisperRecieved(self, event, message, sender)
             DKP_UI.UpdateUI()
             ADDON_COMUNICATION.SendMyData()
 	    end
-	elseif event == "PARTY_MEMBERS_CHANGED" then
+	elseif event == "PLAYER_ENTERING_WORLD" or event == "GROUP_ROSTER_UPDATE" or event == "RAID_ROSTER_UPDATE" then
     -- This event fires when a group (party/raid) roster changes
     local isInGroup = GetNumPartyMembers() > 0  -- Checks if you are in any party (party only)
     local isInRaid = GetNumRaidMembers() > 0      -- Checks if you are in a raid group
@@ -121,6 +134,7 @@ end
 end
 
 local areDKPEventsRegistered = false 
+local areRollEventsRegistered = false
 
 function EVENTS.RegisterDKPEvents()
     if not areDKPEventsRegistered then  -- Only register if not already registered
@@ -148,9 +162,55 @@ end
 function EVENTS.RegisterGlobalEvents()
     GLOBALEventsFrame:RegisterEvent("CHAT_MSG_WHISPER")
     GLOBALEventsFrame:RegisterEvent("CHAT_MSG_ADDON")
-    GLOBALEventsFrame:RegisterEvent("PARTY_MEMBERS_CHANGED")
+
+    GLOBALEventsFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
+    GLOBALEventsFrame:RegisterEvent("GROUP_ROSTER_UPDATE")
+    GLOBALEventsFrame:RegisterEvent("RAID_ROSTER_UPDATE")
     GLOBALEventsFrame:SetScript("OnEvent", OnGlobalWhisperRecieved)
 end
 function EVENTS.UnregisterGlobalEvents()
     GLOBALEventsFrame:UnregisterEvent("CHAT_MSG_WHISPER")
+    GLOBALEventsFrame:UnregisterEvent("CHAT_MSG_ADDON")
+
+    GLOBALEventsFrame:UnregisterEvent("PLAYER_ENTERING_WORLD")
+    GLOBALEventsFrame:UnregisterEvent("GROUP_ROSTER_UPDATE")
+    GLOBALEventsFrame:UnregisterEvent("RAID_ROSTER_UPDATE")
+end
+
+function EVENTS.RegisterRollEvents()
+    if not areRollEventsRegistered then
+        ROLLEventFrame:RegisterEvent("CHAT_MSG_SYSTEM")
+        ROLLEventFrame:SetScript("OnEvent", function(self, event, message)
+            -- Match the roll message
+            local playerName, rollValue, minRoll, maxRoll = message:match(REGEX.strings.rollRegex)
+            if playerName and rollValue and minRoll and maxRoll then
+                rollValue = tonumber(rollValue) -- Ensure roll value is treated as a number
+                
+                -- Initialize ROLL_UI.rolls if not already done
+                if not ROLL_UI.rolls then
+                    ROLL_UI.rolls = {}
+                end
+
+                -- Check if the player has already rolled
+                if ROLL_UI.rolls[playerName] then
+                    -- Player has already rolled: Send a multi-roll warning to the raid chat
+                    SendChatMessage("Multi-roll detected by: " .. playerName, "RAID")
+                else
+                    -- Player's first roll: Add to the rolls table
+                    ROLL_UI.rolls[playerName] = rollValue
+                end
+                ROLL_UI.UpdateUI()
+            end
+        end)
+        
+        areRollEventsRegistered = true
+        print("|cff00ff00[DEBUG] ROLL events successfully registered.")
+    end
+end
+
+
+function EVENTS.UnregisterRollEvents()
+    ROLLEventFrame:UnregisterEvent("CHAT_MSG_SYSTEM")
+   
+    areRollEventsRegistered = false
 end

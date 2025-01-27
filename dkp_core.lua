@@ -178,6 +178,8 @@ function DKP_CORE.FindPlayerDKP(playerName)
     if PLAYERS_ROOSTER then
 	    if PLAYERS_ROOSTER[playerName] then
 		    return string.format("|cffFFA500[DKP: %s]|r", PLAYERS_ROOSTER[playerName].dkpAmount)
+        else
+            return ""
 		end
 	else
         return ""
