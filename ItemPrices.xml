@@ -21,6 +21,14 @@
 				</FontString>
 			</Layer>
 		</Layers>
+		<Frames>
+			<ScrollFrame name="ScrollFrame" inherits="UIPanelScrollFrameTemplate">
+				<Size x="578" y="328" />
+				<Anchors>
+					<Anchor x="14" y="-29" point="TOPLEFT" />
+				</Anchors>
+			</ScrollFrame>
+		</Frames>
 		<Scripts>
 			<OnLoad inherit="prepend">
 				self:RegisterForDrag("LeftButton")

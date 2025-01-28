@@ -32,6 +32,8 @@ function ITEM_PRICES.SaveItemData(itemLink, amount)
     ITEM_PRICES.SaveData()
 end
 
+
+
 function ITEM_PRICES.LoadData()
     if not DKP_Items then
         -- Initialize DKP_Items if it doesn't exist

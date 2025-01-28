@@ -93,8 +93,15 @@ local function addItemLinkTooltip(msg)
 end
 
 local function GetPlayerDKP(playerName)
+
     if DKP_CORE.config and DKP_CORE.config.showDkpInRaidChat == true then
-        return DKP_CORE.FindPlayerDKP(playerName) 
+        --PLAYERS_ROOSTER = {}
+        if PLAYERS_ROOSTER and PLAYERS_ROOSTER[playerName] then
+		    return PLAYERS_ROOSTER[playerName].dkpAmount
+        else
+            return ""
+		end
+        
 	else
 	    return ""
 	end

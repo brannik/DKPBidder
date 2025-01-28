@@ -51,9 +51,11 @@ local function OnDKPMessageRecieved(self, event, message, sender)
 			    roll:Show()
                 ROLL_UI.SetItemToSlot(startRollMsg)
                 ROLL_UI.rolls = {}
+                ROLL_UI.UpdateUI()
 			else
 			    ROLL_UI.SetItemToSlot(startRollMsg)
                 ROLL_UI.rolls = {}
+                ROLL_UI.UpdateUI()
 			end
 		end
 
