@@ -175,7 +175,19 @@ function DKP_CORE.GatherDKP(manualRefresh)
 end
 
 function DKP_CORE.FindPlayerOtherPlayerDKP(playerName)
-    return 100
+    -- get the other player's DKP
+    -- if officer note is not visibe return -1
+
+    if DKP_CORE.config and DKP_CORE.config.dkpStorage == "Officer Note" then
+	    if DKP_CORE.config.officerNoteVisible == true then
+		    return string.format("[DKP: %d]",1000)
+        else
+            return "|cFFFF0000Can't read!|r"
+		end
+	end
+    if DKP_CORE.config and DKP_CORE.config.dkpStorage == "Public Note" then
+	    return string.format("[DKP: %d]",100)
+	end
 end
 
 function DKP_CORE.FindPlayerDKP(playerName)

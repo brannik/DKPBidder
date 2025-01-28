@@ -99,17 +99,17 @@ local function PopulateRoosterScrollFrame()
     headerFrame:SetPoint("TOPLEFT", 0, yOffset)
 
     local playerNameHeader = headerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    playerNameHeader:SetPoint("LEFT", 10, 0)
+    playerNameHeader:SetPoint("LEFT", 20, 0)
     playerNameHeader:SetText("Name")
     playerNameHeader:SetWidth(playerNameWidth)
 
     local dkpHeader = headerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    dkpHeader:SetPoint("LEFT", playerNameHeader, "RIGHT", 10, 0)
+    dkpHeader:SetPoint("LEFT", playerNameHeader, "RIGHT", 30, 0)
     dkpHeader:SetText("DKP")
     dkpHeader:SetWidth(dkpWidth)
 
     local iconHeader = headerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    iconHeader:SetPoint("LEFT", dkpHeader, "RIGHT", 10, 0)
+    iconHeader:SetPoint("LEFT", dkpHeader, "RIGHT", 20, 0)
     iconHeader:SetText("MS")
     iconHeader:SetWidth(iconWidth)
 
@@ -134,18 +134,23 @@ local function PopulateRoosterScrollFrame()
             rowFrame:SetSize(scrollChild:GetWidth(), ROW_HEIGHT)
             rowFrame:SetPoint("TOPLEFT", 0, yOffset)
 
-            -- Create player name text (left-aligned)
+            -- Create spec icon (before the player name)
+            local addonIcon = rowFrame:CreateTexture(nil, "OVERLAY")
+            addonIcon:SetSize(16, 16)
+            addonIcon:SetPoint("LEFT", 10, 0)
+
+            -- Create player name text (to the right of the spec icon)
             local playerDataText = rowFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-            playerDataText:SetPoint("LEFT", 10, 0)
+            playerDataText:SetPoint("LEFT", addonIcon, "RIGHT", 5, 0) -- Position right of the spec icon
             playerDataText:SetFont("Fonts\\FRIZQT__.TTF", 14) -- Increase font size
-            playerDataText:SetWidth(playerNameWidth)  -- Fixed width for name column
+            playerDataText:SetWidth(playerNameWidth) -- Fixed width for name column
             playerDataText:SetJustifyH("LEFT") -- Ensure text is left-aligned
 
             -- Create DKP text (left-aligned)
             local dkpAmountText = rowFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
             dkpAmountText:SetPoint("LEFT", playerDataText, "RIGHT", 10, 0)
             dkpAmountText:SetWidth(dkpWidth)  -- Fixed width for DKP column
-            dkpAmountText:SetJustifyH("LEFT") -- Ensure text is left-aligned
+            dkpAmountText:SetJustifyH("CENTER") -- Ensure text is left-aligned
 
             -- Create spec icon (ensure it's a valid texture object)
             local specIcon = rowFrame:CreateTexture(nil, "OVERLAY")
@@ -189,15 +194,17 @@ local function PopulateRoosterScrollFrame()
                     icon = specs[playerData.MSChange].icon
                 end
                 specIcon:SetTexture(icon)
+                addonIcon:SetTexture("Interface\\Buttons\\UI-CheckBox-Check")
 
             else
                 -- Player is not in PLAYERS_ROOSTER: Add their name in class color and show DKP if available
                 local DKP = DKP_CORE.FindPlayerOtherPlayerDKP(name)
                 playerDataText:SetText(string.format("%s%s|r", GetClassColor(classFileName), name))
-                dkpAmountText:SetText(string.format("[DKP: %d]", DKP or 0))
+                dkpAmountText:SetText(DKP)
                 
                 -- Add spec icon (question mark for unknown)
                 specIcon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
+                addonIcon:SetTexture("Interface\\Buttons\\UI-GroupLoot-Pass-Up")
             end
 
             -- Adjust yOffset for the next row
@@ -264,17 +271,17 @@ local function PopulateWitchRaid()
     headerFrame:SetPoint("TOPLEFT", 0, yOffset)
 
     local playerNameHeader = headerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    playerNameHeader:SetPoint("LEFT", 10, 0)
+    playerNameHeader:SetPoint("LEFT", 20, 0)
     playerNameHeader:SetText("Name")
     playerNameHeader:SetWidth(playerNameWidth)
 
     local dkpHeader = headerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    dkpHeader:SetPoint("LEFT", playerNameHeader, "RIGHT", 10, 0)
+    dkpHeader:SetPoint("LEFT", playerNameHeader, "RIGHT", 30, 0)
     dkpHeader:SetText("DKP")
     dkpHeader:SetWidth(dkpWidth)
 
     local iconHeader = headerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    iconHeader:SetPoint("LEFT", dkpHeader, "RIGHT", 10, 0)
+    iconHeader:SetPoint("LEFT", dkpHeader, "RIGHT", 20, 0)
     iconHeader:SetText("MS")
     iconHeader:SetWidth(iconWidth)
 
@@ -317,18 +324,23 @@ local function PopulateWitchRaid()
             rowFrame:SetSize(scrollChild:GetWidth(), ROW_HEIGHT)
             rowFrame:SetPoint("TOPLEFT", 0, yOffset)
 
-            -- Create player name text (left-aligned)
+            -- Create spec icon (before the player name)
+            local addonIcon = rowFrame:CreateTexture(nil, "OVERLAY")
+            addonIcon:SetSize(16, 16)
+            addonIcon:SetPoint("LEFT", 10, 0)
+
+            -- Create player name text (to the right of the spec icon)
             local playerDataText = rowFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-            playerDataText:SetPoint("LEFT", 10, 0)
+            playerDataText:SetPoint("LEFT", addonIcon, "RIGHT", 5, 0) -- Position right of the spec icon
             playerDataText:SetFont("Fonts\\FRIZQT__.TTF", 14) -- Increase font size
-            playerDataText:SetWidth(playerNameWidth)  -- Fixed width for name column
+            playerDataText:SetWidth(playerNameWidth) -- Fixed width for name column
             playerDataText:SetJustifyH("LEFT") -- Ensure text is left-aligned
 
             -- Create DKP text (left-aligned)
             local dkpAmountText = rowFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
             dkpAmountText:SetPoint("LEFT", playerDataText, "RIGHT", 10, 0)
             dkpAmountText:SetWidth(dkpWidth)  -- Fixed width for DKP column
-            dkpAmountText:SetJustifyH("LEFT") -- Ensure text is left-aligned
+            dkpAmountText:SetJustifyH("CENTER") -- Ensure text is left-aligned
 
             -- Create spec icon (ensure it's a valid texture object)
             local specIcon = rowFrame:CreateTexture(nil, "OVERLAY")
@@ -372,15 +384,18 @@ local function PopulateWitchRaid()
                     icon = specs[playerData.MSChange].icon
                 end
                 specIcon:SetTexture(icon)
+                addonIcon:SetTexture("Interface\\Buttons\\UI-CheckBox-Check")
 
             else
                 -- Player is not in PLAYERS_ROOSTER: Add their name in class color and show DKP if available
                 local DKP = DKP_CORE.FindPlayerOtherPlayerDKP(name)
+                
                 playerDataText:SetText(string.format("%s%s|r", GetClassColor(class), name))
-                dkpAmountText:SetText(string.format("[DKP: %d]", DKP or 0))
+                dkpAmountText:SetText(DKP)
                 
                 -- Add spec icon (question mark for unknown)
                 specIcon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
+                addonIcon:SetTexture("Interface\\Buttons\\UI-GroupLoot-Pass-Up")
             end
 
             -- Adjust yOffset for the next row

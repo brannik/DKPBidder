@@ -1,0 +1,26 @@
+<Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="DKPFrame.lua" />
+	<Frame name="DKPFrame" inherits="BackdropTemplate" parent="PaperDollFrame" toplevel="true">
+		<Size x="297" y="41" />
+		<Anchors>
+			<Anchor point="CENTER" relativeTo="CharacterFrame" relativePoint="TOP">
+				<Offset y="5" />
+			</Anchor>
+		</Anchors>
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+		</KeyValues>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="DKPFrameAmountText" inherits="GameFontNormal" font="Fonts\MORPHEUS.TTF" text="FontString1">
+					<Size x="262" y="20" />
+					<Anchors>
+						<Anchor x="17" y="-10" point="TOPLEFT" />
+					</Anchors>
+					<FontHeight val="14" />
+					<Color r="1" g="0.753" b="1" />
+				</FontString>
+			</Layer>
+		</Layers>
+	</Frame>
+</Ui>

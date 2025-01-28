@@ -33,6 +33,13 @@
     <Content Include="DKPBidder.toc">
       <SubType>TableOfContents</SubType>
     </Content>
+    <Content Include="DKPFrame.lua">
+      <SubType>Code</SubType>
+      <DependentUpon>DKPFrame.xml</DependentUpon>
+    </Content>
+    <Content Include="DKPFrame.xml">
+      <SubType>Frame</SubType>
+    </Content>
     <Content Include="DKPUI.lua">
       <SubType>Code</SubType>
       <DependentUpon>DKPUI.xml</DependentUpon>

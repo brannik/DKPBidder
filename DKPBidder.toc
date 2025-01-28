@@ -18,6 +18,7 @@ roll.xml
 ItemPrices.xml
 SpecSelect.xml
 RoosterFrame.xml
+DKPFrame.xml
 
 DKPUI.lua
 EventHandlers.lua
@@ -36,3 +37,4 @@ SpecSelect.lua
 SpecIcons.lua
 RoosterFrame.lua
 CustomChat.lua
+DKPFrame.lua

@@ -119,7 +119,7 @@ local function OnGlobalWhisperRecieved(self, event, message, sender)
     -- This event fires when a group (party/raid) roster changes
     local isInGroup = GetNumPartyMembers() > 0  -- Checks if you are in any party (party only)
     local isInRaid = GetNumRaidMembers() > 0      -- Checks if you are in a raid group
-    
+    ROOSTER_UI.UpdateFrame()
     if isInGroup then
         if isInRaid then
             print("|cff00ff00[DEBUG] You are now in a raid group.")
@@ -130,6 +130,7 @@ local function OnGlobalWhisperRecieved(self, event, message, sender)
         end
     else
         print("|cffff0000[ERROR] You are not in a group!")
+        
         EVENTS.UnregisterDKPEvents()  -- No group, so unregister events
     end
 end
