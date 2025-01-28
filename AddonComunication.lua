@@ -59,7 +59,8 @@ local function AddonMessage(self, event, ...)
                     MSChange = receivedData.MSChange
                 }
                 -- Confirm the update
-                print("Updated player data for: " .. receivedData.playerName)
+                ROOSTER_UI.UpdateFrame()
+                --print("Updated player data for: " .. receivedData.playerName)
             end
         elseif receivedPrefix == requestPrefix then
             -- get otherd data

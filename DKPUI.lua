@@ -43,7 +43,7 @@ local function OnFrameShown()
     else
         print("Error: DKPUI_ItemSlot not found. Check your XML definition.")
     end
-
+        
     local dkpAmountText = _G["dkpAmount"]
     if dkpAmountText then
 	    dkpAmountText:SetText("You have " .. DKP_CORE.DkpAmount .. " DKP")

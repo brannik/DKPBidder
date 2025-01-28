@@ -174,6 +174,10 @@ function DKP_CORE.GatherDKP(manualRefresh)
 	end
 end
 
+function DKP_CORE.FindPlayerOtherPlayerDKP(playerName)
+    return 100
+end
+
 function DKP_CORE.FindPlayerDKP(playerName)
     if PLAYERS_ROOSTER then
 	    if PLAYERS_ROOSTER[playerName] then

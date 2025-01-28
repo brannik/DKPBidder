@@ -1,7 +1,7 @@
 <Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="RoosterFrame.lua" />
 	<Frame name="RoosterFrame" inherits="UIPanelDialogTemplate" parent="UIParent" toplevel="true" movable="true">
-		<Size x="597" y="363" />
+		<Size x="350" y="363" />
 		<Anchors>
 			<Anchor point="TOPLEFT">
 				<Offset x="100" y="-150" />
@@ -10,6 +10,49 @@
 		<KeyValues>
 			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
 		</KeyValues>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString inherits="GameFontNormal" font="Fonts\MORPHEUS.TTF" text="Rooster">
+					<Size x="80" y="20" />
+					<Anchors>
+						<Anchor x="19" y="-3" point="TOPLEFT" />
+					</Anchors>
+					<FontHeight val="14" />
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Guild (Online)">
+					<Size x="105" y="20" />
+					<Anchors>
+						<Anchor x="41" y="-326" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontNormal" text="Raid">
+					<Size x="65" y="20" />
+					<Anchors>
+						<Anchor x="174" y="-326" point="TOPLEFT" />
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<ScrollFrame name="scrollRoosterFrame" inherits="UIPanelScrollFrameTemplate">
+				<Size x="295" y="285" />
+				<Anchors>
+					<Anchor x="19" y="-33" point="TOPLEFT" />
+				</Anchors>
+			</ScrollFrame>
+			<CheckButton name="chkShowGuildRooster" inherits="UICheckButtonTemplate" text="CheckButton1">
+				<Size x="25" y="25" />
+				<Anchors>
+					<Anchor x="19" y="-324" point="TOPLEFT" />
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="chkShowRaidRooster" inherits="UICheckButtonTemplate" protected="true" text="CheckButton1">
+				<Size x="25" y="25" />
+				<Anchors>
+					<Anchor x="152" y="-324" point="TOPLEFT" />
+				</Anchors>
+			</CheckButton>
+		</Frames>
 		<Scripts>
 			<OnLoad inherit="prepend">
 				self:RegisterForDrag("LeftButton")
