@@ -77,21 +77,24 @@ local function ReqeustDkpFromOfficer(officerName)
     return "?dkp"
 end
 local function GetDkpFromNote(note)
-    return string.match(note,REGEX.strings.noteDkpRegex) or 0
+    return string.match(note,REGEX.strings.noteDkpRegex) or note
 end
-local function FindMainChar(mainName,officer)
-    local numGuildMembers = GetNumGuildMembers(true)
-        for i = 1, numGuildMembers do
-            -- Retrieve guild member info
+local function FindMainChar(mainName, officer)
+    local numGuildMembers = GetNumGuildMembers(true)  -- Include offline members
+    for i = 1, numGuildMembers do
+        -- Retrieve guild member info
         local name, rank, rankIndex, level, class, zone, note, officernote, online, status, classFileName = GetGuildRosterInfo(i)
-        if name == mainName then
-            if officer and officer == true then
-			    return officernote
-			else
-                return note
-			end
+        
+        -- Ensure name comparison is case insensitive
+        if strlower(name) == strlower(mainName) then
+            if officer then
+                return officernote  -- Return officer note if requested
+            else
+                return note  -- Return normal note otherwise
+            end
         end
-     end
+    end
+    return nil  -- Explicitly return nil if no match is found
 end
 
 function DKP_CORE.BackupDKP()
@@ -180,13 +183,32 @@ function DKP_CORE.FindPlayerOtherPlayerDKP(playerName)
 
     if DKP_CORE.config and DKP_CORE.config.dkpStorage == "Officer Note" then
 	    if DKP_CORE.config.officerNoteVisible == true then
-		    return string.format("[DKP: %d]",1000)
+            -- get dkp from officer note
+            local note = GetPlayerNote(playerName,true)
+            if NoteIsMainChar(note) ~= nil then
+                local mainChar = FindMainChar(note,true)
+                local dkp = GetDkpFromNote(mainChar)
+                return string.format("[DKP: %s]",dkp)
+            else
+                local dkp = GetDkpFromNote(note)
+                return string.format("[DKP: %s]",dkp)
+		    end
+		    
         else
             return "|cFFFF0000Can't read!|r"
 		end
 	end
     if DKP_CORE.config and DKP_CORE.config.dkpStorage == "Public Note" then
-	    return string.format("[DKP: %d]",100)
+        -- get dkp from public note
+        local note = GetPlayerNote(playerName)
+        if NoteIsMainChar(note) ~= nil then
+            local mainChar = FindMainChar(note)
+            local dkp = GetDkpFromNote(mainChar)
+            return string.format("[DKP: %s]",dkp)
+        else
+            local dkp = GetDkpFromNote(note)
+            return string.format("[DKP: %s]",dkp)
+		end
 	end
 end
 

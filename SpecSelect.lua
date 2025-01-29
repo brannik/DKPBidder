@@ -3,10 +3,11 @@
 local eventFrame = CreateFrame("Frame")
 MS_Change = MS_Change or -1
 
+local specs = nil
 
 local function OnFrameShown()
     local _, playerClass = UnitClass("player")
-    local specs = SPEC_ICONS.GetPlayerSpecsAndIcons(playerClass)
+    specs = SPEC_ICONS.GetPlayerSpecsAndIcons(playerClass)
 
     if specs[1] then
         local button = _G["specToggleOne"]
@@ -62,6 +63,9 @@ eventFrame:RegisterEvent("ADDON_LOADED")
 eventFrame:SetScript("OnEvent", function(self, event, addonName)
     if event == "ADDON_LOADED" and addonName == "DKPBidder" then
         SpecSelect:Hide()
+        local currentIndex = SPEC_ICONS.GetActiveSpecIndex()
+        MS_Change = currentIndex
+        DKP_CORE.UpdateLocalPlayerInfo()
     end
 end)
 

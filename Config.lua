@@ -78,6 +78,11 @@ local function InitUI()
 	    if DKP_CORE.config.dkpStorage == "Officer Note" then
 		    PNoteCheck:SetChecked(false)
             ONoteCheck:SetChecked(true)
+            if DKP_CORE.config.officerNoteVisible then
+			    ONoteVisCheck:SetChecked(true)
+			else
+                ONoteVisCheck:SetChecked(false)
+            end
             ONoteVisCheck:Enable()
         elseif DKP_CORE.config.dkpStorage == "Public Note" then
 		    PNoteCheck:SetChecked(true)
