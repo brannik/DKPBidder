@@ -1,7 +1,7 @@
 <Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="ItemPrices.lua" />
 	<Frame name="ItemPrices" inherits="UIPanelDialogTemplate" hidden="true" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
-		<Size x="633" y="371" />
+		<Size x="603" y="371" />
 		<Anchors>
 			<Anchor point="TOPLEFT">
 				<Offset x="100" y="-150" />
@@ -23,7 +23,7 @@
 		</Layers>
 		<Frames>
 			<ScrollFrame name="ScrollFrame" inherits="UIPanelScrollFrameTemplate">
-				<Size x="578" y="328" />
+				<Size x="556" y="328" />
 				<Anchors>
 					<Anchor x="14" y="-29" point="TOPLEFT" />
 				</Anchors>

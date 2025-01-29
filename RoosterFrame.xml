@@ -1,7 +1,7 @@
 <Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="RoosterFrame.lua" />
 	<Frame name="RoosterFrame" inherits="UIPanelDialogTemplate" parent="UIParent" toplevel="true" movable="true">
-		<Size x="379" y="363" />
+		<Size x="390" y="363" />
 		<Anchors>
 			<Anchor point="TOPLEFT">
 				<Offset x="100" y="-150" />
@@ -35,7 +35,7 @@
 		</Layers>
 		<Frames>
 			<ScrollFrame name="scrollRoosterFrame" inherits="UIPanelScrollFrameTemplate">
-				<Size x="328" y="285" />
+				<Size x="338" y="285" />
 				<Anchors>
 					<Anchor x="19" y="-33" point="TOPLEFT" />
 				</Anchors>

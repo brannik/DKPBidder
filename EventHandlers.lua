@@ -117,23 +117,26 @@ local function OnGlobalWhisperRecieved(self, event, message, sender)
 	    end
 	elseif event == "PLAYER_ENTERING_WORLD" or event == "GROUP_ROSTER_UPDATE" or event == "RAID_ROSTER_UPDATE" then
     -- This event fires when a group (party/raid) roster changes
-    local isInGroup = GetNumPartyMembers() > 0  -- Checks if you are in any party (party only)
-    local isInRaid = GetNumRaidMembers() > 0      -- Checks if you are in a raid group
-    ROOSTER_UI.UpdateFrame()
-    if isInGroup then
-        if isInRaid then
-            print("|cff00ff00[DEBUG] You are now in a raid group.")
-            EVENTS.RegisterDKPEvents()  -- Call raid-specific logic
+        local isInGroup = GetNumPartyMembers() > 0  -- Checks if you are in any party (party only)
+        local isInRaid = GetNumRaidMembers() > 0      -- Checks if you are in a raid group
+        ROOSTER_UI.UpdateFrame()
+        if isInGroup then
+            if isInRaid then
+                print("|cff00ff00[DEBUG] You are now in a raid group.")
+                EVENTS.RegisterDKPEvents()  -- Call raid-specific logic
+            else
+                print("|cff00ff00[DEBUG] You are now in a party.")
+                EVENTS.UnregisterDKPEvents()  -- Call party-specific logic
+            end
         else
-            print("|cff00ff00[DEBUG] You are now in a party.")
-            EVENTS.UnregisterDKPEvents()  -- Call party-specific logic
-        end
-    else
-        print("|cffff0000[ERROR] You are not in a group!")
+            print("|cffff0000[ERROR] You are not in a group!")
         
-        EVENTS.UnregisterDKPEvents()  -- No group, so unregister events
+            EVENTS.UnregisterDKPEvents()  -- No group, so unregister events
+        end
+    elseif event == "GUILD_ROSTER_UPDATE" then
+        GuildRoster()
+        ROOSTER_UI.UpdateFrame()
     end
-end
 end
 
 local areDKPEventsRegistered = false 
@@ -169,6 +172,7 @@ function EVENTS.RegisterGlobalEvents()
     GLOBALEventsFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
     GLOBALEventsFrame:RegisterEvent("GROUP_ROSTER_UPDATE")
     GLOBALEventsFrame:RegisterEvent("RAID_ROSTER_UPDATE")
+    GLOBALEventsFrame:RegisterEvent("GUILD_ROSTER_UPDATE")
     GLOBALEventsFrame:SetScript("OnEvent", OnGlobalWhisperRecieved)
 end
 function EVENTS.UnregisterGlobalEvents()
@@ -178,6 +182,7 @@ function EVENTS.UnregisterGlobalEvents()
     GLOBALEventsFrame:UnregisterEvent("PLAYER_ENTERING_WORLD")
     GLOBALEventsFrame:UnregisterEvent("GROUP_ROSTER_UPDATE")
     GLOBALEventsFrame:UnregisterEvent("RAID_ROSTER_UPDATE")
+    GLOBALEventsFrame:UnregisterEvent("GUILD_ROSTER_UPDATE")
 end
 
 function EVENTS.RegisterRollEvents()

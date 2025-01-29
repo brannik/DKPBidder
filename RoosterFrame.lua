@@ -72,7 +72,7 @@ local function PopulateRoosterScrollFrame()
     local yOffset = -PADDING -- Start offset
 
     -- Column widths
-    local playerNameWidth = 100
+    local playerNameWidth = 130
     local dkpWidth = 120
     local iconWidth = 25
 
@@ -109,7 +109,7 @@ local function PopulateRoosterScrollFrame()
     dkpHeader:SetWidth(dkpWidth)
 
     local iconHeader = headerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    iconHeader:SetPoint("LEFT", dkpHeader, "RIGHT", 20, 0)
+    iconHeader:SetPoint("LEFT", dkpHeader, "RIGHT", 0, 0)
     iconHeader:SetText("MS")
     iconHeader:SetWidth(iconWidth)
 
@@ -244,7 +244,7 @@ local function PopulateWitchRaid()
     local yOffset = -PADDING -- Start offset
 
     -- Column widths
-    local playerNameWidth = 100
+    local playerNameWidth = 130
     local dkpWidth = 120
     local iconWidth = 25
 
@@ -281,7 +281,7 @@ local function PopulateWitchRaid()
     dkpHeader:SetWidth(dkpWidth)
 
     local iconHeader = headerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    iconHeader:SetPoint("LEFT", dkpHeader, "RIGHT", 20, 0)
+    iconHeader:SetPoint("LEFT", dkpHeader, "RIGHT", 0, 0)
     iconHeader:SetText("MS")
     iconHeader:SetWidth(iconWidth)
 
